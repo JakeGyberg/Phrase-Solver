@@ -27,6 +27,10 @@ public class  Board
     return solvedPhrase;
   }
 
+  public String getPhrase1() {
+    return phrase;
+  }
+  
   /* your code here - mutator(s)  */
 
 

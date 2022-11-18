@@ -31,7 +31,6 @@ public class PhraseSolver
     int currentPlayer = 1;
 
     Scanner input = new Scanner(System.in);
-    String winner = "";
     while (!solved) 
     {
       //Directions/info/input
@@ -57,14 +56,9 @@ public class PhraseSolver
       currentPlayer = currentPlayer * (currentPlayer % 2) + 1;
 
       //Game ending
-      if (board.isSolved(guess)) {
+      if (board.isSolved(guess) || board.getPhrase() == board.getPhrase1()) {
         solved = true;
         if (player1.getPoints() > player2.getPoints()) {
-          winner = player1.getName();
-        } else {
-          winner = player2.getName();
-        }
-        if (currentPlayer == 1) {
           System.out.println("\n\n" + player1.getName() + " wins");
         } else {
           System.out.println("\n\n" + player2.getName() + " wins");
