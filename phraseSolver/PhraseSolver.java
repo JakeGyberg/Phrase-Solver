@@ -64,7 +64,12 @@ public class PhraseSolver
         } else {
           winner = player2.getName();
         }
-        System.out.println("\n\n" + winner + " wins");
+        if (currentPlayer == 1) {
+          System.out.println("\n\n" + player1.getName() + " wins");
+        } else {
+          System.out.println("\n\n" + player2.getName() + " wins");
+        }
+        
       }
     } 
    
